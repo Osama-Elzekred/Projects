@@ -1,0 +1,1 @@
+﻿select  Model+' '+Brand as CarName from CarTb1 where Available =  'YES'
