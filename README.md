@@ -4,7 +4,7 @@ Containing the the projects technical reports and code
 ##contributors
 <!-- Copy-paste in your Readme.md file -->
 
-<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+<a href = "https://github.com/Osama-Elzekred/Projects/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo = GitHub_username/repository_name"/>
 </a>
 
