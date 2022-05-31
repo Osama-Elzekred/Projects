@@ -91,27 +91,27 @@ namespace CarRental
                 }
             }
         }
-        private void fillAvailable()
-        {
-            con.Open();
-            string quary = "select Available from CarTb1";
-            SqlCommand cmd = new SqlCommand(quary, con);
+        //private void fillAvailable()
+        //{
+        //    con.Open();
+        //    string quary = "select Available from CarTb1";
+        //    SqlCommand cmd = new SqlCommand(quary, con);
             
-            SqlDataReader rdr;
-            rdr = cmd.ExecuteReader();
-            //string str = "";
-            //foreach (var item in rdr)
-            //{
-            //    str += (item).ToString()+"  ";
-            //}
-            //MessageBox.Show(str);
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Available", typeof(string));
-            dt.Load(rdr);
-            Search.ValueMember = "Available";
-            Search.DataSource = dt;
-            con.Close();
-        }
+        //    SqlDataReader rdr;
+        //    rdr = cmd.ExecuteReader();
+        //    //string str = "";
+        //    //foreach (var item in rdr)
+        //    //{
+        //    //    str += (item).ToString()+"  ";
+        //    //}
+        //    //MessageBox.Show(str);
+        //    DataTable dt = new DataTable();
+        //    dt.Columns.Add("Available", typeof(string));
+        //    dt.Load(rdr);
+        //    Search.ValueMember = "Available";
+        //    Search.DataSource = dt;
+        //    con.Close();
+        //}
         private void CarDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             RegNumTb.Text = CarDGV.SelectedRows[0].Cells[0].Value.ToString();
@@ -132,7 +132,7 @@ namespace CarRental
                 try
                 {
                     con.Open();
-                    string query = "update CarTb1 set Brand='" + BrandTb.Text + "',Model='" + ModelTb.Text + "',Available='" + AvailableCb.SelectedItem.ToString() + "',Price='" + PriceTb.Text + "' where RegNum='" + RegNumTb.Text + "'";
+                    string query = "update CarTb1 set Brand='" + BrandTb.Text + "', Model='" + ModelTb.Text + "',Available='" + AvailableCb.SelectedItem.ToString() + "',Price='" + PriceTb.Text + "' where RegNum='" + RegNumTb.Text + "'";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Car Updated Successfully");
@@ -180,6 +180,11 @@ namespace CarRental
         }
 
         private void AvailableCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Search_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -22,7 +22,7 @@ namespace CarRental
         private void Rental_Load_1(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'carRentalDataSet.UserTb1' table. You can move, or remove it, as needed.
-            this.userTb1TableAdapter.Fill(this.carRentalDataSet.UserTb1);
+            //this.userTb1TableAdapter.Fill(this.carRentalDataSet.UserTb1);
             fillcombo();
             fillCustomer();
             disp();
@@ -65,6 +65,9 @@ namespace CarRental
             con.Open();
             
 
+            
+              
+               
             // by me 
             string quary2 = "select * from CustomerTb1";
             da = new SqlDataAdapter(quary2, con);
@@ -73,7 +76,7 @@ namespace CarRental
             CustCb.DataSource = ds.Tables["CustomerTb1"];
             CustCb.DisplayMember = "Custid";
             CustCb.ValueMember = "Custid";
-            //carId = 
+            
 
             //string quary = "select Custid from CustomerTb1";
             //SqlCommand cmd = new SqlCommand(quary, con);
@@ -89,22 +92,20 @@ namespace CarRental
         private void fetchCustName()
         {
             con.Open();
-            string quary = "select * from CustomerTb1 where Custid='"+CustCb.SelectedValue.ToString()+"'";
-            SqlCommand cmd = new SqlCommand(quary,con);
+            string quary = "select CustName from CustomerTb1 where Custid='" + CustCb.SelectedValue.ToString()+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(quary, con);
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
-            {
-                CustNameTb.Text = dr["CustName"].ToString();
-            }
+            sda.Fill(dt);
+            //MessageBox.Show($"{dt.Rows[0][0].ToString()} ");
+            CustNameTb.Text = dt.Rows[0][0].ToString();
+
             con.Close();
         }
         private void UpdateOnRent()
         {
             con.Open();
             //string tem
-            string query = "update CarTb1 set Available='"+"NO"+"' where RegNum=" + CarRegCb.SelectedValue.ToString() ;
+            string query = "update CarTb1 set Available='NO' where RegNum=" + carId.Text.ToString();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();
@@ -112,7 +113,7 @@ namespace CarRental
         private void UpdateOnRentDelete()
         {
             con.Open();
-            string query = "update CarTb1 set Available='" + "YES" + "' where RegNum='" + carId.Text.ToString()+"'";
+            string query = "update CarTb1 set Available='YES' where RegNum=" + carId.Text.ToString();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();

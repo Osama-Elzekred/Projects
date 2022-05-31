@@ -67,7 +67,7 @@ namespace CarRental
             else
             {
                 DelayTb.Text = "" + nrOfDayes;
-                FineTb.Text = "" + (nrOfDayes * 250);
+                FineTb.Text = "" + (nrOfDayes * int.Parse(RentDGV.SelectedRows[0].Cells[5].Value.ToString()));
             }
         }
 
@@ -126,10 +126,10 @@ namespace CarRental
         private void UpdateOnRentDelete()
         {
             con.Open();
-            string query = "update CarTb1 set Available='" + "YES" + "'";
+            string query = "update CarTb1 set Available='" + "YES" + "' WHERE RegNum ="+CarIdTb.Text;
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
-            con.Close();
+            con.Close(); 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -143,11 +143,28 @@ namespace CarRental
                 try
                 {
                     con.Open();
-                    string query = $"delete from ReturnTb1 where ReturnId='{ IdTb.Text }'";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Returned Rent Deleted Successfully");
-                    ReturnDGV.DataSource = ds.Tables[0];
+
+
+                    string quary = $"select count (*) from ReturnTb1 where ReturnId='{ IdTb.Text}'";
+                    SqlDataAdapter sda = new SqlDataAdapter(quary, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    //MessageBox.Show($"{dt.Rows[0][0].ToString()} ");
+                    if (dt.Rows[0][0].ToString() == "0")
+                    {
+                        MessageBox.Show("Wrong Id");
+                    }
+
+
+                    else
+                    {
+                        string query = $"delete from ReturnTb1 where ReturnId='{ IdTb.Text }'";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Returned Rent Deleted Successfully");
+                        ReturnDGV.DataSource = ds.Tables[0];
+                    }
                     con.Close();
                     dispRetun();
                     

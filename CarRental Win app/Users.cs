@@ -28,7 +28,7 @@ namespace CarRental
             con.Open();
             string quary = "select * from UserTb1";
             SqlDataAdapter da = new SqlDataAdapter(quary,con);
-            //SqlCommandBuilder builder = new SqlCommandBuilder(da);
+           //SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
             UserDGV.DataSource = ds.Tables[0];
