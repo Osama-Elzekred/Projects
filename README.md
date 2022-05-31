@@ -20,9 +20,4 @@ Containing the the projects technical reports and code
  - OsamaSalah123
 </a>
 
- @MohamedNasr6  
-@OsamaSalah123 
-@hassanmahmoud334 
-
-
 <!-- Made with [contributors-img](https://contrib.rocks). -->
