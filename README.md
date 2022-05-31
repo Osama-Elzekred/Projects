@@ -10,10 +10,11 @@ Containing the the projects technical reports and code
 <a href = "https://github.com/MohamedNasr6">
  - MohamedNasr6
 </a>
-
+<hr/>
 <a href = "https://github.com/hassanmahmoud334">
  - hassanmahmoud334
 </a>
+<hr/>
 
 <a href ="https://github.com/OsamaSalah123">
  - OsamaSalah123
@@ -21,4 +22,4 @@ Containing the the projects technical reports and code
 
 
 
-Made with [contributors-img](https://contrib.rocks).
+<!-- Made with [contributors-img](https://contrib.rocks). -->
