@@ -7,17 +7,14 @@ Containing the the projects technical reports and code
 <!-- <a href = "https://github.com/Osama-Elzekred/Projects/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo = Osama-Elzekred/Projects"/>
 </a> -->
-
-<a href = "<a href = "https://github.com/MohamedNasr6">
- -MohamedNasr6
+<a href = "https://github.com/MohamedNasr6">
+ - MohamedNasr6
 </a>
-
-<a href = "<a href = "(https://github.com/hassanmahmoud334)">
- -hassanmahmoud334
+<a href = "https://github.com/hassanmahmoud334">
+ - hassanmahmoud334
 </a>
-
-<a href = "<a href = "https://github.com/OsamaSalah123">
- -OsamaSalah123
+<a href ="https://github.com/OsamaSalah123">
+ - OsamaSalah123
 </a>
 
 
