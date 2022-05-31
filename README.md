@@ -5,7 +5,7 @@ Containing the the projects technical reports and code
 <!-- Copy-paste in your Readme.md file -->
 
 <a href = "https://github.com/Osama-Elzekred/Projects/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo = GitHub_username/repository_name"/>
+  <img src = "https://contrib.rocks/image?repo = Osama-Elzekred/Projects"/>
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
