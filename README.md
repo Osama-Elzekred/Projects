@@ -4,9 +4,9 @@ Containing the the projects technical reports and code
 ## Contributors
 <!-- Copy-paste in your Readme.md file -->
 
-<!-- <a href = "https://github.com/Osama-Elzekred/Projects/graphs/contributors">
+ <a href = "https://github.com/Osama-Elzekred/Projects/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo = Osama-Elzekred/Projects"/>
-</a> -->
+</a> 
 <a href = "https://github.com/MohamedNasr6">
  - MohamedNasr6
 </a>
