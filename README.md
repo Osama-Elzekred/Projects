@@ -1,5 +1,5 @@
 # Projects
-Containing the the projects technical reports and code
+Containing the the projects technical report and code
 
 ## Contributors
 <!-- Copy-paste in your Readme.md file -->
